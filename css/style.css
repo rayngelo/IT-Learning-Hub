@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    background: #f7f9fc;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 8%;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.css-logo {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border: 3px solid #2563eb;
+    border-radius: 50%;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.css-logo:hover {
+    transform: rotate(12deg) scale(1.08);
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #374151;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #2563eb;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    min-height: 520px;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: #eaf4ff;
+}
+
+.hero-text {
+    max-width: 560px;
+    animation: fadeUp 0.8s ease both;
+}
+
+.small-title {
+    color: #2563eb;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 78px);
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero p:not(.small-title) {
+    max-width: 480px;
+    margin-bottom: 28px;
+    color: #4b5563;
+}
+
+.button,
+.learn-button {
+    display: inline-block;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    padding: 12px 22px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.button:hover,
+.learn-button:hover {
+    transform: scale(1.05);
+    background: #1d4ed8;
+}
+
+.css-code-logo {
+    width: 270px;
+    height: 210px;
+    border: 8px solid #1f2937;
+    border-radius: 16px 16px 8px 8px;
+    display: grid;
+    place-items: center;
+    background: white;
+    transform: rotate(2deg);
+    animation: slideIn 0.9s ease both;
+    position: relative;
+}
+
+.css-code-logo::after {
+    content: "";
+    position: absolute;
+    width: 210px;
+    height: 12px;
+    bottom: -25px;
+    left: 20px;
+    background: #1f2937;
+    border-radius: 50%;
+}
+
+.css-code-logo span {
+    font-size: 46px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.section-intro {
+    color: #6b7280;
+    margin-bottom: 35px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.course-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 30px 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.10);
+}
+
+.course-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 18px;
+    display: grid;
+    place-items: center;
+    border: 3px solid #2563eb;
+    border-radius: 12px;
+    color: #2563eb;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.course-card h3 {
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    color: #6b7280;
+    margin-bottom: 22px;
+}
+
+.learn-button {
+    padding: 9px 16px;
+    font-size: 14px;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    text-align: left;
+    background: white;
+}
+
+.about > div:last-child {
+    max-width: 600px;
+}
+
+.about p {
+    color: #6b7280;
+}
+
+.about-box {
+    width: 230px;
+    height: 180px;
+    border: 2px solid #9ca3af;
+    display: grid;
+    place-items: center;
+    background: #f3f4f6;
+}
+
+.about-symbol {
+    width: 75px;
+    height: 75px;
+    display: grid;
+    place-items: center;
+    border: 3px solid #2563eb;
+    border-radius: 50%;
+    color: #2563eb;
+    font-size: 42px;
+}
+
+.contact {
+    max-width: 800px;
+    margin: auto;
+}
+
+form {
+    display: grid;
+    text-align: left;
+    gap: 8px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    font: inherit;
+    outline: none;
+    transition: border 0.25s ease, box-shadow 0.25s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+form .button {
+    margin-top: 18px;
+    justify-self: center;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #111827;
+    color: white;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(60px) rotate(2deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) rotate(2deg);
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar,
+    .hero,
+    .about {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        text-align: center;
+    }
+}
